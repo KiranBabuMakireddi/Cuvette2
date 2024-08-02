@@ -1,0 +1,460 @@
+*{
+    font-family:DM Sans;
+}
+
+/* Navigation Bar */
+.navbar{
+    display: flex;
+    background-color: #6F6AF7;
+    margin: auto;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    position:fixed;
+    top: 0px;
+    width: 100vw;
+}
+
+.nav-logo{
+    flex-basis: 10%;
+    font-family: 'Delius Unicase', cursive;
+    font-size: 32px;
+}
+
+
+.nav-menu img{
+    height: 25px;
+}
+
+.nav-options{
+    flex-basis: 80%;
+}
+.nav-options ul{
+    
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-options ul li{
+    font-size: 23px;
+    margin-right: 15px;
+}
+
+.nav-options ul li select{
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.nav-options ul li input{
+    border-radius: 10px;
+    padding: 10px 10px;
+    border: none;
+}
+
+.nav-options ul li:last-of-type{
+    position: relative;
+}
+
+.nav-options ul li img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 16px;
+
+}
+
+.bi{
+    display: none;
+}
+
+/* navbar responsive */
+ 
+@media (max-width: 831px) {
+    .navbar {
+        padding: 10px 15px;
+        width: 100%;
+        height: 400px; /* Allow the navbar to adjust height */
+        top: -320px;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-end; /* Align to start for better stacking */
+        z-index: 10001;
+    }
+
+    .nav-logo {
+        font-size: 24px;
+        margin-bottom: 10px; /* Add spacing between logo and options */
+        flex-basis: auto; /* Allow the logo to size naturally */
+    }
+
+    .nav-options {
+        flex-basis: auto;
+        width: 100%; /* Take up full width */
+    }
+
+    .nav-options ul {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+        width: 100%;
+    }
+
+    .nav-options ul li {
+        font-size: 18px;
+        margin-bottom: 10px; /* Add spacing between items */
+        margin-right: 0; /* Remove right margin for better alignment */
+        width: 100%; /* Ensure full width for each item */
+    }
+    .bi{
+        font-size: 25px;
+        width: fit-content;
+        display: block;
+        color: red;
+    
+    }
+    .nav-options ul li:last-of-type {
+        margin-bottom: 0; /* Remove margin for the last item */
+    }
+}
+
+
+/* banner */
+
+.banner{
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-top: 120px;
+}
+
+.banner-left img{
+    margin: 10px;
+    height: 50vh;
+}
+
+.banner-right{
+    background-color: #E5D8FF;
+    padding: 30px ;
+    border-radius: 20px;
+    height: 50vh;
+    width: 65%;
+    box-sizing: border-box;
+}
+
+.banner-right p{
+    font-weight: 400;
+    font-size: 24px;
+    color: #6F7373;
+}
+/* banner responsive */
+@media (max-width:831px){
+
+    .banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .banner-left img{
+        width: 75vw;
+        height: 55vh;
+        margin: 10px;
+    }
+    
+    .banner-right{
+        background-color: #E5D8FF;
+        padding: 30px ;
+        border-radius: 20px;
+        width: 75vw;
+        height: 55vh;
+        box-sizing: border-box;
+    }
+    
+
+}
+/* cards */
+.card-container{
+    width: 90vw;
+    margin-left: 40px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+
+.card{
+    width: 19%;
+    padding:10px 15px;
+    box-shadow: 0px 9px 31px rgba(0, 0, 0, 0.5);
+    border-radius: 11px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.card-1{
+    background: #929DFF;
+}
+.card-2{
+    background: #734CF2;
+}
+.card-3{
+    background: #D288FF;
+}
+.card-4{
+    background: #000000;
+}
+
+
+/* cards responsive */
+@media (max-width:831px){
+    .card-container{
+        margin: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card{
+        width: 30%;
+        margin-top: 15px;
+    }
+}
+
+
+/* container */
+.container{
+    display: flex;
+    background-color: #483EFF;
+    width: 90vw;
+    margin-left: 40px;
+    margin-right: 20px;
+    justify-content: space-evenly;
+    border-radius: 21px;
+    height: 60vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.left-container button{
+    padding: 15px 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    border-style: solid;
+    
+}
+
+.left-container button:first-of-type{
+   background: #BCE0F6;
+   color: black;
+   box-shadow: 0px 6px 35px rgba(0, 0, 0, 0.49);
+}
+
+
+.right-container{
+    box-sizing: border-box;
+    width: 70%;
+    height: 90%;
+    background-color: white;
+    margin: 2% 0 2% 0;
+    border-radius: 20px;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.info-heading{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.105em;
+    color: #04285A;
+}
+
+.info{
+    margin-left: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.105em;
+    color: #04285A;
+}
+
+.info span{
+    font-family: Roboto;
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.105em;
+    color: #04285A;
+}
+
+.next-button{
+    background-color: black;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 6px;
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+}
+
+.next-button img{
+    width: 20px;
+    margin-left: 7px;
+}
+
+
+
+/* Container Responsive */
+
+@media (max-width:831px) {
+    
+    .left-container{
+        width: 20%;
+    }
+    .left-container button{
+        /* margin: 10px; */
+        padding: 10px;
+        font-size: 20px;
+        width: fit-content;
+    }
+    .right-container{
+        width: 65%;
+    }
+
+    .info-heading{
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 0.105em;
+        color: #04285A;
+    }
+    
+    .info{
+        margin-left: 0px;
+        
+    }
+    
+    .info span{
+        margin-left: 0px;
+        
+    }
+    
+}
+
+.help{
+    background-color: white;
+    border-radius: 100%;
+    position: fixed;
+    right: 60px;
+    bottom: 20px;
+    box-shadow: 0px 9px 31px rgba(0, 0, 0, 0.4);
+    padding: 7px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.help img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.social{
+    position: sticky;
+    top: 80px;
+    margin-top:25vh;
+    float: right;
+
+}
+
+.social img{
+    height: 40px;
+    display: block;
+    width: fit-content;
+}
+
+
+/* Social Responsive */
+
+@media (max-width:831px){
+    .social{
+        position: absolute;
+        top: 80px;
+        margin-top:25vh;
+        float: right;
+    
+    }
+    
+    .social img{
+        height: 40px;
+        display: block;
+        width: fit-content;
+    }
+}
+body{
+    margin: 0;
+}
+
+
+@media (max-width:540px){
+    .container{
+        margin: 25px;
+        margin-bottom: 100px;
+    }
+    .left-container{
+        width: 20%;
+    }
+    .left-container button{
+        padding: 5px;
+        font-size: 10px;
+        width: fit-content;
+    }
+    .right-container{
+        width: 65%;
+    }
+
+    .info-heading{
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 0.105em;
+        color: #04285A;
+    }
+    
+    .info{
+        margin-left: 0px;
+        
+    }
+    
+    .info span{
+        display: none;
+        margin-left: 0px;
+        
+    }
+}
